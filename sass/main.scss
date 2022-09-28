@@ -61,94 +61,94 @@ header {
     align-items: center;
     padding: 0;
     li {
-        margin-bottom: 20px;
-        background-color: $primary-color;
-        box-shadow: 0px 0px 10px 2px rgb(180, 180, 180);
-        border-radius: 20px;
-        padding: 20px;
-        min-width: 300px;
-        i {
-            margin: 0 20px;
-        }
+      margin-bottom: 20px;
+      background-color: $primary-color;
+      box-shadow: 0px 0px 10px 2px rgb(180, 180, 180);
+      border-radius: 20px;
+      padding: 20px;
+      min-width: 300px;
+      i {
+        margin: 0 20px;
+      }
     }
   }
 }
-#restaurants{
-    background-color: $primary-color;
-    h2 {
-        padding-top: 30px;
-        padding-bottom: 10px;
-        margin: 8px;
-    }
-    article {
-        @include flex-column();
-        align-items: center;
-        margin-bottom: 40px;
-        figure {
-            box-shadow: 0px 0px 10px 2px rgb(246, 246, 246);
-            background-color: white;
-            border-radius: 12px;
-            a {
-                h3 {
-                    font-size: 1em;
-                    padding-left: 10px;
-                    padding-top: 6px;
-                }
-                p {
-                    font-size: 1em;
-                    padding-bottom: 6px;
-                }
-                span{
-                    display: none;
-                }
-                img {
-                    border-top-left-radius: 12px;
-                    border-top-right-radius: 12px;
-                    height: 150px;
-                    
-                    min-width: 300px;
-                    object-fit: cover;
-                }
-            }
-            figcaption{
-                h2 {
-                    margin-top: -3px;
-                    font-size: 1em;
-                    justify-content: flex-start;
-                }
-                p {
-                    font-size: 1em;
-                    margin-left: 10px;
-                }
-                span {
-                    display: flex;
-                    justify-content: flex-end;
-                    margin-right: 10px;
-                    margin-top: -10px;
-                }
-            }
+#restaurants {
+  background-color: $primary-color;
+  h2 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin: 8px;
+  }
+  article {
+    @include flex-column();
+    align-items: center;
+    margin-bottom: 40px;
+    figure {
+      box-shadow: 0px 0px 10px 2px rgb(246, 246, 246);
+      background-color: white;
+      border-radius: 12px;
+      a {
+        h3 {
+          font-size: 1em;
+          padding-left: 10px;
+          padding-top: 6px;
         }
+        p {
+          font-size: 1em;
+          padding-bottom: 6px;
+        }
+        span {
+          display: none;
+        }
+        img {
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          height: 150px;
+
+          min-width: 300px;
+          object-fit: cover;
+        }
+      }
+      figcaption {
+        h2 {
+          margin-top: -3px;
+          font-size: 1em;
+          justify-content: flex-start;
+        }
+        p {
+          font-size: 1em;
+          margin-left: 10px;
+        }
+        span {
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 10px;
+          margin-top: -10px;
+        }
+      }
     }
+  }
 }
 footer {
-    background-color: $footer-color;
+  background-color: $footer-color;
+  color: white;
+  h3 {
+    font-family: $fonts-logo;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+  }
+  ul {
+    list-style-type: none;
+    @include flex-column();
+    margin-left: -12px;
     color: white;
-    h3 {
-        font-family: $fonts-logo;
-        padding-top: 25px;
-        padding-left: 25px;
-        padding-bottom: 15px;
-    }
-    ul {
-        list-style-type: none;
-        @include flex-column();
-        margin-left: -12px;
+    li {
+      padding-bottom: 8px;
+      a {
         color: white;
-        li {
-            padding-bottom: 8px;
-            a {
-                color: white;
-            }
-        }
+      }
     }
+  }
 }
