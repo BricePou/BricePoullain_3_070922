@@ -10,3 +10,8 @@
   border-radius: 50px;
   color: white;
 }
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
