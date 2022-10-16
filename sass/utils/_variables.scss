@@ -1,7 +1,17 @@
 $fonts: 'Roboto', sans-serif;
 $fonts-logo: 'Shrikhand', cursive;
-$primary-color: rgb(246, 246, 246);
-$position-color: rgb(234, 234, 234);
-$footer-color: rgb(53, 53, 53);
+$primary-grey-color: rgb(246, 246, 246);
+$position-grey-color: rgb(234, 234, 234);
+$footer-black-color: rgb(53, 53, 53);
+$purple: rgb(154,86,213);
+$purple-hover: rgb(245,236,255);
+$green: linear-gradient(#9CE0D1, #9EDECE);
+$dark-green: rgb(9,130,97);
 $button-color: linear-gradient(#e586df, #9D59DC);
-$border: 1px solid purple;
+$purple: purple;
+
+$medium: 768px;
+$large: 992px;
+$small-up : "screen and (max-width: #{$medium})";
+$medium-down : "screen and (min-width: #{$medium})";
+$large-down : "screen and (min-width #{$large})";

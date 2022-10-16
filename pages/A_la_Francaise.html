@@ -10,7 +10,7 @@
       content="Site de réservation et de composition de menu pour les restaurants Gastronomique. Gagnez du temps en arrivant au restaurant!"
     />
     <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="../assets/css/A_la_Francaise.css" />
+    <link rel="stylesheet" href="../assets/css/alafrancaise.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -24,7 +24,7 @@
     <!-- Header-->
     <header>
       <nav>
-        <a href="../index.html"><i class="fa-regular fa-arrow-left"></i></a>
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
       </nav>
       <img src="../assets/images/logo/ohmyfood.png" alt="logo de ohmyfood" />
     </header>
@@ -34,16 +34,17 @@
         src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
         alt="une table de restaurant avec 2 plats servis"
       />
-      <div>
+      <div id="menu">
         <section id="titles">
           <h1>
             A la française
           </h1>
-          <i class="fa-thin fa-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </section>
         <!-- ENTREE-->
         <section id="entrees">
           <h2>ENTREES</h2>
+          <span class="border"></span>
           <article>
             <div>
               <h3>Tartare de poulpe acidulé</h3>
@@ -72,6 +73,7 @@
         <!-- PLATS-->
         <section id="mains">
           <h2>PLATS</h2>
+          <span class="border"></span>
           <article>
             <div>
               <h3>Coquilles Saint-Jacques</h3>
@@ -100,6 +102,7 @@
         <!-- DESSERTS-->
         <section id="desserts">
           <h2>DESSERTS</h2>
+          <span class="border"></span>
           <article>
             <div>
               <h3>Pétales de violettes glacés</h3>
@@ -125,7 +128,7 @@
             <i class="fa-solid fa-circle-check"></i>
           </article>
         </section>
-        <a href="#">Commander</a>
+        <a class="btn" href="#">Commander</a>
       </div>
     </main>
     <!-- Footer-->
@@ -140,13 +143,7 @@
         </li>
         <li>
           <a href="#">
-            <i class="fa-duotone fa-handshake-angle"></i>
-            Proposer un restaurant
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa-duotone fa-handshake-angle"></i>
+            <i class="fa-solid fa-handshake-angle"></i>
             Devenir partenaire
           </a>
         </li>
@@ -160,3 +157,4 @@
     ></script>
   </body>
 </html>
+

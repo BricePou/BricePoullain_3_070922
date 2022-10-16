@@ -1,1 +1,213 @@
-*{box-sizing:border-box;margin:0 0;font-family:"Roboto",sans-serif}a{color:#000;text-decoration:none}ol{list-style-type:none}header{display:flex;justify-content:center;align-items:center;background-color:#fafafa;box-shadow:0 5px 5px -5px #333;padding:10px 0}header img{height:30px;width:auto;margin-top:10px;margin-bottom:10px}#position{display:flex;justify-content:center;align-items:center;background-color:#eaeaea;box-shadow:0 5px 5px -5px #333;padding:15px 0}#position i{padding-right:10px}#about{padding:30px 10px;display:flex;flex-direction:column;justify-content:space-between;flex-basis:30%;align-items:center;text-align:center;background-color:#f6f6f6;padding-bottom:30px}#about a{box-shadow:0 5px 5px -5px #333;background:linear-gradient(#e586df, #9D59DC);margin:30px;padding:15px;border-radius:50px;color:#fff}#steps{margin-top:50px;margin-bottom:40px}#steps h2{margin:10px;align-items:flex-start;margin-bottom:30px}#steps ol{display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:0}#steps ol li{margin-bottom:20px;background-color:#f6f6f6;box-shadow:0px 0px 10px 2px #b4b4b4;border-radius:20px;padding:20px;min-width:300px}#steps ol li i{margin:0 20px}#restaurants{background-color:#f6f6f6}#restaurants h2{padding-top:30px;padding-bottom:10px;margin:8px}#restaurants article{display:flex;flex-direction:column;justify-content:space-between;align-items:center;margin-bottom:40px}#restaurants article figure{box-shadow:0px 0px 10px 2px #f6f6f6;background-color:#fff;border-radius:12px}#restaurants article figure a h3{font-size:1em;padding-left:10px;padding-top:6px}#restaurants article figure a p{font-size:1em;padding-bottom:6px}#restaurants article figure a span{display:none}#restaurants article figure a img{border-top-left-radius:12px;border-top-right-radius:12px;height:150px;min-width:300px;object-fit:cover}#restaurants article figure figcaption h2{margin-top:-3px;font-size:1em;justify-content:flex-start}#restaurants article figure figcaption p{font-size:1em;margin-left:10px}#restaurants article figure figcaption span{display:flex;justify-content:flex-end;margin-right:10px;margin-top:-10px}footer{background-color:#353535;color:#fff}footer h3{font-family:"Shrikhand",cursive;padding-top:25px;padding-left:25px;padding-bottom:15px}footer ul{list-style-type:none;display:flex;flex-direction:column;justify-content:space-between;margin-left:-12px;color:#fff}footer ul li{padding-bottom:8px}footer ul li a{color:#fff}/*# sourceMappingURL=style.css.map */
+.btn {
+  margin: 30px;
+  padding: 15px;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 0 5px 5px -5px #333;
+  background: linear-gradient(#e586df, #9D59DC);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ol {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 5px 5px -5px #333;
+  padding: 10px 0;
+  box-shadow: 0px 1px 6px 1px rgb(201, 201, 201);
+  position: relative;
+}
+header img {
+  height: 30px;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 234, 234);
+  padding: 15px 0;
+}
+#position i {
+  padding-right: 10px;
+}
+
+#about {
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 30%;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(246, 246, 246);
+  padding-bottom: 30px;
+}
+
+#steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+#steps h2 {
+  display: flex;
+  flex-basis: 100%;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+#steps ol {
+  margin-left: -20px;
+  margin-right: 20px;
+  list-style: decimal;
+  list-style-type: none;
+}
+#steps ol li {
+  margin-bottom: 20px;
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0px 0px 10px 2px rgb(180, 180, 180);
+  border-radius: 20px;
+  padding: 20px 10px;
+}
+#steps ol li :hover {
+  color: purple;
+}
+#steps ol li i {
+  margin: 0 10px;
+}
+
+#restaurants {
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 20px;
+}
+#restaurants h2 {
+  flex-basis: 100%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin: 8px;
+}
+#restaurants article {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  margin-right: 2px;
+}
+#restaurants article figure {
+  box-shadow: 0px 0px 10px 2px rgb(246, 246, 246);
+  background-color: white;
+  border-radius: 12px;
+}
+#restaurants article figure a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#restaurants article figure a h2 {
+  flex-basis: 100%;
+  font-size: 1em;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+#restaurants article figure a span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: red;
+}
+#restaurants article figure a img {
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 200px;
+  min-width: 350px;
+}
+#restaurants article figure figcaption {
+  display: flex;
+  flex-wrap: wrap;
+}
+#restaurants article figure figcaption h3 {
+  padding-left: 10px;
+  padding-top: 8px;
+  flex-basis: 100%;
+}
+#restaurants article figure figcaption p {
+  flex-basis: 60%;
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+#restaurants article figure figcaption span i {
+  flex-basis: 20%;
+  display: none;
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding-bottom: 15px;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: -12px;
+  color: white;
+}
+footer ul li {
+  padding-bottom: 8px;
+}
+footer ul li a {
+  color: white;
+}
+footer ul li a i {
+  width: 14px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  li {
+    flex-basis: 31%;
+  }
+  ol {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #restaurants {
+    flex-direction: unset;
+    justify-content: space-around;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
