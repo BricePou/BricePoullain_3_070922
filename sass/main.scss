@@ -1,3 +1,5 @@
+@import "./base/normalize.scss";
+@import "./base/base.scss";
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./composants/button";
@@ -7,15 +9,9 @@
 @import "./pages/a_la_francaise.scss";
 @import "./base/typography.scss";
 
-* {
-  box-sizing: border-box;
-  margin: 0 0;
-  font-family: $fonts;
-}
-a {
-  color: black;
-  text-decoration: none;
-}
+
+
+
 @media #{$medium-down} {
   #menu{
     max-width: 800px;
