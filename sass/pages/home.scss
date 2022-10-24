@@ -1,4 +1,3 @@
-
 #position {
   @include flex-center();
   background-color: rgb(234, 234, 234);
@@ -19,8 +18,8 @@
   padding-bottom: 30px;
 }
 #steps {
-    max-width: 1100px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,6 +37,9 @@
     margin-right: 20px;
     list-style-type: none;
     li {
+      display: flex;
+      align-items: center;
+      padding: 20px 0px;
       &:hover {
         background-color: $purple-hover;
         i {
@@ -45,20 +47,19 @@
         }
       }
       &::before {
-        counter-increment: section; 
-        content: "" counter(section);
+        counter-increment: section;
+        content: counter(section);
         text-align: center;
-        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 15px;
-        left: -15px;
-        width: 25px;
-        height: 25px;
+        margin-left: -12px;
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
         color: white;
         background-color: $purple;
+        font-size: 0.8em;
       }
       font-weight: bold;
       position: relative;
@@ -66,7 +67,6 @@
       background-color: $primary-grey-color;
       box-shadow: 0px 1px 10px 0px rgb(221, 221, 221);
       border-radius: 20px;
-      padding: 20px 10px;
       i {
         color: $grey-font;
         margin: 0 10px;
@@ -75,7 +75,6 @@
   }
 }
 #restaurants {
-
   background-color: $primary-grey-color;
   padding: 0px 20px;
   div {
@@ -85,7 +84,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
   }
   h2 {
     max-width: 1040px;
@@ -96,6 +94,7 @@
     margin: 8px;
   }
   article {
+    padding: 10px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -103,14 +102,13 @@
     margin-bottom: 40px;
     margin-right: 2px;
     figure {
-      box-shadow: 0px 0px 10px 2px rgb(246, 246, 246);
+      box-shadow: 0px 1px 10px 0px rgb(221, 221, 221);
       background-color: white;
       border-radius: 12px;
       a {
         position: relative;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         h2 {
           flex-basis: 100%;
           font-size: 1em;
@@ -119,11 +117,12 @@
         }
         span {
           position: absolute;
+          border-radius: 2px;
           right: 10px;
           top: 10px;
           background-color: $green;
-          font-size: 1em;
-          padding: 2px 10px;
+          font-size: 0.8em;
+          padding: 5px 10px;
           color: $dark-green;
         }
         img {
@@ -137,24 +136,27 @@
       figcaption {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        h3 {
-          padding-left: 10px;
-          padding-top: 8px;
-          flex-basis: 90%;
-        }
-        p {
-          flex-basis: 90%;
-          padding-left: 10px;
-          padding-top: 6px;
-          padding-bottom: 8px;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 80%;
+          h3 {
+            margin: unset;
+            padding-bottom: 5px;
+            flex-basis: 80%;
+          }
+          p {
+            flex-basis: 80%;
+          }
         }
         span {
-          display: flex;
-          align-items: center;
-          flex-basis: 10%;
           font-size: 1.4em;
-          .none{
+          padding-right: 10px;
+          .none {
             display: none;
           }
           i {
@@ -162,6 +164,27 @@
           }
         }
       }
+    }
+  }
+}
+@media #{$medium-down} {
+  #restaurants {
+    div {
+      flex-direction: unset;
+      flex-wrap: wrap;
+      flex-basis: 40%;
+      justify-content: space-around;
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    h3 {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      margin-left: -90px;
     }
   }
 }
