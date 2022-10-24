@@ -251,10 +251,11 @@ a {
   color: white;
   box-shadow: 0 5px 5px -5px #333;
   background: linear-gradient(#e586df, #9D59DC);
+  transition-duration: 500ms;
 }
 .btn:hover {
   box-shadow: 0 5px 20px -5px rgb(36, 36, 36);
-  opacity: 0.9;
+  background-color: 1;
 }
 
 header {
@@ -340,7 +341,7 @@ footer ul li a i {
     border-bottom-color: #e586df;
     border-radius: 50%;
     animation: chargeur 6s linear infinite;
-  }.//
+  }
   @keyframes chargeur{
  0%{
   transform: rotate(0deg) scale(1);
@@ -528,7 +529,6 @@ footer ul li a i {
 #restaurants article figure figcaption span {
   font-size: 1.4em;
   padding-right: 10px;
-  position: inherit;
 }
 #restaurants article figure figcaption span .none {
   display: none;

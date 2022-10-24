@@ -28,7 +28,7 @@
     border-bottom-color: #e586df;
     border-radius: 50%;
     animation: chargeur 6s linear infinite;
-  }.//
+  }
   @keyframes chargeur{
  0%{
   transform: rotate(0deg) scale(1);
@@ -207,13 +207,11 @@
         span {
           font-size: 1.4em;
           padding-right: 10px;
-          position: inherit;
           .none {
             display: none;
             }
           i {
             cursor: pointer;
-
             }
 
           }
