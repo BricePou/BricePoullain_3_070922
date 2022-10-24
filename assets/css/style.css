@@ -310,6 +310,57 @@ footer ul li a i {
   margin-right: 10px;
 }
 
+/*.backgroundloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: stop 6s;
+  h1{
+    position: absolute;
+    top: 300px;
+    font-family: $fonts-logo;
+  }
+  .loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $fonts-logo;
+    margin: auto;
+    border: 16px solid white;
+    width: 120px;
+    height: 120px;
+    border-top-color: #e586df;
+    border-bottom-color: #e586df;
+    border-radius: 50%;
+    animation: chargeur 6s linear infinite;
+  }.//
+  @keyframes chargeur{
+ 0%{
+  transform: rotate(0deg) scale(1);
+ }
+ 25%{
+  border-top-color: #9D59DC;
+  border-bottom-color: #9D59DC;
+ }
+ 50%{
+  transform: rotate(360deg) scale(1)
+ }
+ 75%{
+  border-top-color: #e586df;
+  border-bottom-color: #e586df;
+ }
+ 100%{
+  transform: rotate(720deg) scale(1)
+ }
+  }
+}*/
 #position {
   display: flex;
   justify-content: center;
@@ -477,12 +528,13 @@ footer ul li a i {
 #restaurants article figure figcaption span {
   font-size: 1.4em;
   padding-right: 10px;
+  position: inherit;
 }
 #restaurants article figure figcaption span .none {
   display: none;
 }
 #restaurants article figure figcaption span i {
-  flex-basis: 20%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 992px) {
@@ -557,24 +609,25 @@ main #menu #desserts {
   flex-direction: column;
   font-size: 1em;
 }
-main #menu #entrees::before,
-main #menu #mains::before,
-main #menu #desserts::before {
-  counter-increment: "";
-  content: "";
-  height: 2px;
-  width: 10px;
-  color: green;
-}
 main #menu h2 {
+  font-weight: 400;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
   font-size: 1em;
   margin-bottom: 10px;
   border-bottom-width: 1px;
 }
-main article {
+main #menu h2::after {
+  content: "";
+  margin-top: 2px;
+  display: flex;
+  width: 40px;
+  height: 2px;
+  background-color: rgb(140, 228, 206);
+}
+main #menu article {
   display: flex;
   border-radius: 15px;
   padding: 10px;
@@ -584,13 +637,13 @@ main article {
   justify-content: space-between;
   box-shadow: 0px 0px 10px 2px rgb(219, 219, 219);
 }
-main article div {
+main #menu article div {
   display: flex;
   width: 80%;
   flex-direction: column;
   align-items: flex-start;
 }
-main article div h3 {
+main #menu article div h3 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -599,19 +652,19 @@ main article div h3 {
   margin: unset;
   padding-bottom: 5px;
 }
-main article div p {
+main #menu article div p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
   font-size: 1em;
 }
-main article span {
+main #menu article span {
   display: flex;
   align-items: flex-end;
 }
-main article i {
-  display: none !important;
+main #menu article i {
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
