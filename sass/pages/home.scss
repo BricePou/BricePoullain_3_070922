@@ -1,0 +1,190 @@
+#position {
+  @include flex-center();
+  background-color: rgb(234, 234, 234);
+
+  padding: 15px 0;
+
+  i {
+    padding-right: 10px;
+  }
+}
+#about {
+  padding: 30px 10px;
+  @include flex-column();
+  flex-basis: 30%;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(246, 246, 246);
+  padding-bottom: 30px;
+}
+#steps {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  h2 {
+    display: flex;
+    flex-basis: 100%;
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  ol {
+    counter-reset: section;
+    margin-left: -20px;
+    margin-right: 20px;
+    list-style-type: none;
+    li {
+      display: flex;
+      align-items: center;
+      padding: 20px 0px;
+      &:hover {
+        background-color: $purple-hover;
+        i {
+          color: $purple;
+        }
+      }
+      &::before {
+        counter-increment: section;
+        content: counter(section);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -12px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        color: white;
+        background-color: $purple;
+        font-size: 0.8em;
+      }
+      font-weight: bold;
+      position: relative;
+      margin-bottom: 20px;
+      background-color: $primary-grey-color;
+      box-shadow: 0px 1px 10px 0px rgb(221, 221, 221);
+      border-radius: 20px;
+      i {
+        color: $grey-font;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+#restaurants {
+  background-color: $primary-grey-color;
+  padding: 0px 20px;
+  div {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    max-width: 1040px;
+    width: 100%;
+    flex-basis: 100%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin: 8px;
+  }
+  article {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 40px;
+    margin-right: 2px;
+    figure {
+      box-shadow: 0px 1px 10px 0px rgb(221, 221, 221);
+      background-color: white;
+      border-radius: 12px;
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        h2 {
+          flex-basis: 100%;
+          font-size: 1em;
+          padding-left: 10px;
+          padding-top: 6px;
+        }
+        span {
+          position: absolute;
+          border-radius: 2px;
+          right: 10px;
+          top: 10px;
+          background-color: $green;
+          font-size: 0.8em;
+          padding: 5px 10px;
+          color: $dark-green;
+        }
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          height: 200px;
+        }
+      }
+      figcaption {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 80%;
+          h3 {
+            margin: unset;
+            padding-bottom: 5px;
+            flex-basis: 80%;
+          }
+          p {
+            flex-basis: 80%;
+          }
+        }
+        span {
+          font-size: 1.4em;
+          padding-right: 10px;
+          .none {
+            display: none;
+          }
+          i {
+            flex-basis: 20%;
+          }
+        }
+      }
+    }
+  }
+}
+@media #{$medium-down} {
+  #restaurants {
+    div {
+      flex-direction: unset;
+      flex-wrap: wrap;
+      flex-basis: 40%;
+      justify-content: space-around;
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    h3 {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      margin-left: -90px;
+    }
+  }
+}
