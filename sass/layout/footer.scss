@@ -1,17 +1,17 @@
 footer {
     background-color: $footer-black-color;
     color: white;
-    padding-bottom: 15px;
+    padding:0 20px;
     h3 {
       font-family: $fonts-logo;
       padding-top: 25px;
-      padding-left: 25px;
       padding-bottom: 15px;
+      margin-top: 0;
     }
     ul {
       list-style-type: none;
       @include flex-column();
-      margin-left: -12px;
+      padding: 0;
       color: white;
       li {
         padding-bottom: 8px;

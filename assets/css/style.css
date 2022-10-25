@@ -283,20 +283,20 @@ header a {
 footer {
   background-color: rgb(53, 53, 53);
   color: white;
-  padding-bottom: 15px;
+  padding: 0 20px;
 }
 footer h3 {
   font-family: "Shrikhand", cursive;
   padding-top: 25px;
-  padding-left: 25px;
   padding-bottom: 15px;
+  margin-top: 0;
 }
 footer ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: -12px;
+  padding: 0;
   color: white;
 }
 footer ul li {
@@ -393,7 +393,7 @@ footer ul li a i {
 
 #restaurants {
   background-color: rgb(246, 246, 246);
-  padding: 0px 20px;
+  padding: 0px 20px 70px 20px;
 }
 #restaurants div {
   max-width: 1100px;
@@ -402,23 +402,19 @@ footer ul li a i {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 #restaurants h2 {
   max-width: 1040px;
   width: 100%;
   flex-basis: 100%;
   padding-top: 30px;
-  padding-bottom: 10px;
   margin: 8px;
 }
 #restaurants article {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 450px;
-  margin-bottom: 40px;
-  margin-right: 2px;
 }
 #restaurants article figure {
   box-shadow: 0px 1px 10px 0px rgb(221, 221, 221);
@@ -451,7 +447,7 @@ footer ul li a i {
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  height: 200px;
+  height: 150px;
 }
 #restaurants article figure figcaption {
   display: flex;
@@ -490,18 +486,24 @@ footer ul li a i {
     flex-direction: unset;
     flex-wrap: wrap;
     flex-basis: 40%;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+  #restaurants article {
+    flex-basis: 48%;
+  }
+  #restaurants article figure a img {
+    height: 200px;
   }
   footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
   }
   footer h3 {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
-    margin-left: -90px;
   }
 }
 #titles {
@@ -574,7 +576,7 @@ main #menu h2 {
   margin-bottom: 10px;
   border-bottom-width: 1px;
 }
-main article {
+main #menu article {
   display: flex;
   border-radius: 15px;
   padding: 10px;
@@ -584,13 +586,13 @@ main article {
   justify-content: space-between;
   box-shadow: 0px 0px 10px 2px rgb(219, 219, 219);
 }
-main article div {
+main #menu article div {
   display: flex;
   width: 80%;
   flex-direction: column;
   align-items: flex-start;
 }
-main article div h3 {
+main #menu article div h3 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -599,18 +601,18 @@ main article div h3 {
   margin: unset;
   padding-bottom: 5px;
 }
-main article div p {
+main #menu article div p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
   font-size: 1em;
 }
-main article span {
+main #menu article span {
   display: flex;
   align-items: flex-end;
 }
-main article i {
+main #menu article i {
   display: none !important;
 }
 
