@@ -251,8 +251,10 @@ a {
   color: white;
   box-shadow: 0 5px 5px -5px #333;
   background: linear-gradient(#e586df, #9D59DC);
+  transform: btn;
 }
 .btn:hover {
+  transition: 300ms;
   box-shadow: 0 5px 20px -5px rgb(36, 36, 36);
   opacity: 0.9;
 }
