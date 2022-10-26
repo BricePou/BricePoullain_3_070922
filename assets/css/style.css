@@ -312,6 +312,7 @@ footer ul li a i {
 }
 
 /*.backgroundloader {
+  scale: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -322,13 +323,13 @@ footer ul li a i {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: stop 6s;
-  h1{
+  animation: stop 5s;
+  h1 {
     position: absolute;
     top: 300px;
     font-family: $fonts-logo;
   }
-  .loader{
+  .loader {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,26 +341,7 @@ footer ul li a i {
     border-top-color: #e586df;
     border-bottom-color: #e586df;
     border-radius: 50%;
-    animation: chargeur 6s linear infinite;
-  }
-  @keyframes chargeur{
- 0%{
-  transform: rotate(0deg) scale(1);
- }
- 25%{
-  border-top-color: #9D59DC;
-  border-bottom-color: #9D59DC;
- }
- 50%{
-  transform: rotate(360deg) scale(1)
- }
- 75%{
-  border-top-color: #e586df;
-  border-bottom-color: #e586df;
- }
- 100%{
-  transform: rotate(720deg) scale(1)
- }
+    animation: chargeur 5s linear infinite;
   }
 }*/
 #position {
@@ -527,13 +509,26 @@ footer ul li a i {
   flex-basis: 80%;
 }
 #restaurants article figure figcaption span {
+  width: 10%;
   font-size: 1.4em;
-  padding-right: 10px;
+  position: relative;
+  margin-top: -20px;
+  -webkit-background-clip: content-box;
+  -webkit-text-fill-color: red;
+  transition-property: transform;
+}
+#restaurants article figure figcaption span:active .up {
+  transform: scale(0);
+}
+#restaurants article figure figcaption span:active .none {
+  animation: hearth;
+  animation-duration: 1000ms;
 }
 #restaurants article figure figcaption span .none {
-  display: none;
+  scale: 0;
 }
 #restaurants article figure figcaption span i {
+  position: absolute;
   cursor: pointer;
 }
 
@@ -678,6 +673,47 @@ main #menu article i {
   ol {
     display: flex;
     justify-content: space-around;
+  }
+}
+/*@keyframes chargeur{
+    0%{
+     transform: rotate(0deg) scale(1);
+    }
+    25%{
+     border-top-color: #9D59DC;
+     border-bottom-color: #9D59DC;
+    }
+    50%{
+     transform: rotate(360deg) scale(1)
+    }
+    75%{
+     border-top-color: #e586df;
+     border-bottom-color: #e586df;
+    }
+    100%{
+     transform: rotate(720deg) scale(1)
+    }
+}
+@keyframes stop{
+    0% {
+        scale: 1;
+    }
+    99%{
+        scale: 1;
+    }
+    100%{
+        scale: 0;
+    }
+}*/
+@keyframes hearth {
+  0% {
+    scale: 0;
+  }
+  75% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
   }
 }
 
