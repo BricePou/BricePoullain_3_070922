@@ -29,13 +29,13 @@
     }
 }*/
 @keyframes hearth {
-    0%{
+    from{
         scale: 0;
     }
     75%{
         scale: 1.1;
     }
-    100%{
+    to{
         scale: 1;
     }
 }

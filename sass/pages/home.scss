@@ -195,11 +195,12 @@
             -webkit-background-clip: content-box;
             -webkit-text-fill-color: red;
             transition-property: transform;
-            &:active{
+            &:hover{
               & .up{
                 transform: scale(0);
               }
               & .none{
+                transform: scale(1);
                 animation: hearth;
                 animation-duration: 1000ms;
               }

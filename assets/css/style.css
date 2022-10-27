@@ -517,10 +517,11 @@ footer ul li a i {
   -webkit-text-fill-color: red;
   transition-property: transform;
 }
-#restaurants article figure figcaption span:active .up {
+#restaurants article figure figcaption span:hover .up {
   transform: scale(0);
 }
-#restaurants article figure figcaption span:active .none {
+#restaurants article figure figcaption span:hover .none {
+  transform: scale(1);
   animation: hearth;
   animation-duration: 1000ms;
 }
@@ -706,13 +707,13 @@ main #menu article i {
     }
 }*/
 @keyframes hearth {
-  0% {
+  from {
     scale: 0;
   }
   75% {
     scale: 1.1;
   }
-  100% {
+  to {
     scale: 1;
   }
 }
