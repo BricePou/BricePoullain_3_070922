@@ -513,7 +513,6 @@ footer ul li a i {
   font-size: 1.4em;
   position: relative;
   margin-top: -20px;
-  -webkit-background-clip: content-box;
   -webkit-text-fill-color: red;
   transition-property: transform;
 }
@@ -521,7 +520,6 @@ footer ul li a i {
   transform: scale(0);
 }
 #restaurants article figure figcaption span:hover .none {
-  transform: scale(1);
   animation: hearth;
   animation-duration: 1000ms;
 }
