@@ -25,7 +25,8 @@ audio:not([controls]) {
   height: 0;
 }
 
-[hidden], template {
+[hidden],
+template {
   display: none;
 }
 
@@ -183,7 +184,8 @@ textarea {
   vertical-align: baseline;
 }
 
-button, input {
+button,
+input {
   line-height: normal;
 }
 
@@ -205,7 +207,8 @@ input[disabled] {
   cursor: default;
 }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -656,6 +659,9 @@ main #menu article div p {
 main #menu article span {
   display: flex;
   align-items: flex-end;
+}
+main #menu article i {
+  display: none !important;
 }
 
 @media screen and (min-width: 992px) {
