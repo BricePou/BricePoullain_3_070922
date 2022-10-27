@@ -1,0 +1,126 @@
+#titles {
+  width: 100%;
+  padding-left: 25px;
+  padding-top: 30px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  i {
+    margin-right: 40px;
+    font-size: 1.5em;
+  }
+}
+
+main {
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  #menu {
+    margin-top: -50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: $primary-grey-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-family: $fonts-logo;
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      margin-bottom: -40px;
+      object-fit: cover;
+      z-index: 4;
+    }
+    #entrees,
+    #mains,
+    #desserts {
+      padding-top: 20px;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      font-size: 1em;
+    }
+    h2 {
+      font-weight: 400;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      font-size: 1em;
+      margin-bottom: 10px;
+      border-bottom-width: 1px;
+      &::after {
+        content: "";
+        margin-top: 2px;
+        display: flex;
+        width: 40px;
+        height: 2px;
+        background-color: $green;
+      }
+    }
+    article {
+      display: flex;
+      border-radius: 15px;
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+      background-color: white;
+      justify-content: space-between;
+      box-shadow: 0px 0px 10px 2px rgb(219, 219, 219);
+      div {
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+          font-size: 1em;
+          margin: unset;
+          padding-bottom: 5px;
+        }
+        p {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+          font-size: 1em;
+        }
+      }
+      span {
+        display: flex;
+        align-items: flex-end;
+      }
+      i {
+        display: none !important;
+      }
+    }
+  }
+}
+@media #{$medium-down} {
+  #menu {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  li {
+    flex-basis: 31%;
+  }
+  ol {
+    display: flex;
+    justify-content: space-around;
+  }
+}
