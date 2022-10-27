@@ -313,7 +313,7 @@ footer ul li a i {
   margin-right: 10px;
 }
 
-/*.backgroundloader {
+.backgroundloader {
   scale: 0;
   position: absolute;
   top: 0;
@@ -326,26 +326,27 @@ footer ul li a i {
   justify-content: center;
   align-items: center;
   animation: stop 5s;
-  h1 {
-    position: absolute;
-    top: 300px;
-    font-family: $fonts-logo;
-  }
-  .loader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $fonts-logo;
-    margin: auto;
-    border: 16px solid white;
-    width: 120px;
-    height: 120px;
-    border-top-color: #e586df;
-    border-bottom-color: #e586df;
-    border-radius: 50%;
-    animation: chargeur 5s linear infinite;
-  }
-}*/
+}
+.backgroundloader h1 {
+  position: absolute;
+  top: 300px;
+  font-family: "Shrikhand", cursive;
+}
+.backgroundloader .loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Shrikhand", cursive;
+  margin: auto;
+  border: 16px solid white;
+  width: 120px;
+  height: 120px;
+  border-top-color: #e586df;
+  border-bottom-color: #e586df;
+  border-radius: 50%;
+  animation: chargeur 5s linear infinite;
+}
+
 #position {
   display: flex;
   justify-content: center;
@@ -678,36 +679,36 @@ main #menu article i {
     justify-content: space-around;
   }
 }
-/*@keyframes chargeur{
-    0%{
-     transform: rotate(0deg) scale(1);
-    }
-    25%{
-     border-top-color: #9D59DC;
-     border-bottom-color: #9D59DC;
-    }
-    50%{
-     transform: rotate(360deg) scale(1)
-    }
-    75%{
-     border-top-color: #e586df;
-     border-bottom-color: #e586df;
-    }
-    100%{
-     transform: rotate(720deg) scale(1)
-    }
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-top-color: #9D59DC;
+    border-bottom-color: #9D59DC;
+  }
+  50% {
+    transform: rotate(360deg) scale(1);
+  }
+  75% {
+    border-top-color: #e586df;
+    border-bottom-color: #e586df;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
 }
-@keyframes stop{
-    0% {
-        scale: 1;
-    }
-    99%{
-        scale: 1;
-    }
-    100%{
-        scale: 0;
-    }
-}*/
+@keyframes stop {
+  0% {
+    scale: 1;
+  }
+  99% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
 @keyframes hearth {
   from {
     scale: 0;
