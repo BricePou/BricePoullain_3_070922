@@ -1,27 +1,27 @@
 footer {
-  background-color: $footer-black-color;
-  color: white;
-  padding-bottom: 15px;
-  h3 {
-    font-family: $fonts-logo;
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-bottom: 15px;
-  }
-  ul {
-    list-style-type: none;
-    @include flex-column();
-    margin-left: -12px;
+    background-color: $footer-black-color;
     color: white;
-    li {
-      padding-bottom: 8px;
-      a {
-        color: white;
-        i {
-          width: 14px;
-          margin-right: 10px;
+    padding-bottom: 15px;
+    h3 {
+      font-family: $fonts-logo;
+      padding-top: 25px;
+      padding-left: 25px;
+      padding-bottom: 15px;
+    }
+    ul {
+      list-style-type: none;
+      @include flex-column();
+      margin-left: -12px;
+      color: white;
+      li {
+        padding-bottom: 8px;
+        a {
+          color: white;
+          i {
+            width: 14px;
+            margin-right: 10px;
+          }
         }
       }
     }
   }
-}

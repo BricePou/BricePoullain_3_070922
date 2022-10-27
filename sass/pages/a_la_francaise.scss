@@ -20,6 +20,7 @@ main {
     height: 300px;
     object-fit: cover;
   }
+
   #menu {
     margin-top: -50px;
     border-top-left-radius: 50px;
@@ -103,7 +104,7 @@ main {
         display: flex;
         align-items: flex-end;
       }
-      .up {
+      i {
         display: none !important;
       }
     }
