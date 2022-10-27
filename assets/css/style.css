@@ -657,9 +657,6 @@ main #menu article span {
   display: flex;
   align-items: flex-end;
 }
-main #menu article i {
-  display: none;
-}
 
 @media screen and (min-width: 992px) {
   #menu {
