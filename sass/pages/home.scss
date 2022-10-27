@@ -1,4 +1,4 @@
-/*.backgroundloader {
+.backgroundloader {
   scale: 0;
   position: absolute;
   top: 0;
@@ -30,7 +30,7 @@
     border-radius: 50%;
     animation: chargeur 5s linear infinite;
   }
-}*/
+}
 #position {
   @include flex-center();
   background-color: rgb(234, 234, 234);
