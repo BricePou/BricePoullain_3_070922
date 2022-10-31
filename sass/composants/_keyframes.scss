@@ -1,32 +1,32 @@
-@keyframes chargeur{
-    0%{
-     transform: rotate(0deg) scale(1);
-    }
-    25%{
-     border-top-color: #9D59DC;
-     border-bottom-color: #9D59DC;
-    }
-    50%{
-     transform: rotate(360deg) scale(1)
-    }
-    75%{
-     border-top-color: #e586df;
-     border-bottom-color: #e586df;
-    }
-    100%{
-     transform: rotate(720deg) scale(1)
-    }
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-top-color: #9d59dc;
+    border-bottom-color: #9d59dc;
+  }
+  50% {
+    transform: rotate(360deg) scale(1);
+  }
+  75% {
+    border-top-color: #e586df;
+    border-bottom-color: #e586df;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
 }
-@keyframes stop{
-    0% {
-        scale: 1;
-    }
-    99%{
-        scale: 1;
-    }
-    100%{
-        scale: 0;
-    }
+@keyframes stop {
+  0% {
+    scale: 1;
+  }
+  99% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
 }
 @keyframes hearth {
   from {
@@ -40,16 +40,23 @@
   }
 }
 @keyframes lazyloading {
-  0%{
-    transform-origin: 50% bottom;
-    transform: translateY(200px);
-    scale: 0;
+  from {
+    transform: translateY(100px);
     opacity: 0;
   }
-  100% {
+  to {
     transform: translateY(0px);
-    scale: 1;
     opacity: 1;
   }
 }
-
+@keyframes check {
+  from {
+    transform-origin: right;
+    flex: 0;
+    opacity: 0;
+  }
+  to {
+    flex: 1;
+    opacity: 1;
+  }
+}

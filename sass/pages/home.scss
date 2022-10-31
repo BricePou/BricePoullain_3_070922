@@ -1,6 +1,6 @@
 .backgroundloader {
   scale: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -17,10 +17,10 @@
     font-family: $fonts-logo;
   }
   .loader {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $fonts-logo;
     margin: auto;
     border: 16px solid white;
     width: 120px;
@@ -29,6 +29,17 @@
     border-bottom-color: #e586df;
     border-radius: 50%;
     animation: chargeur 5s linear infinite;
+  }
+  .circle{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+    border-radius: 50%;
   }
 }
 #position {
@@ -187,14 +198,15 @@
           font-size: 1.4em;
           position: relative;
           margin-top: -20px;
-          -webkit-text-fill-color: red;
           transition-property: transform;
-          &:hover {
+          
+          &:active, &:checked {
             & .up {
-              transform: scale(0);
+              transform: scale(1);
             }
             & .none {
-              animation: hearth;
+              animation: hearth ;
+              animation-fill-mode: forwards;
               animation-duration: 1000ms;
             }
           }
@@ -202,6 +214,10 @@
             scale: 0;
           }
           i {
+            background: $button-color;
+            -webkit-background-clip: text;
+            background-clip: text;
+           -webkit-text-fill-color:transparent;
             position: absolute;
             cursor: pointer;
           }

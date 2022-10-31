@@ -315,7 +315,7 @@ footer ul li a i {
 
 .backgroundloader {
   scale: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -333,10 +333,10 @@ footer ul li a i {
   font-family: "Shrikhand", cursive;
 }
 .backgroundloader .loader {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Shrikhand", cursive;
   margin: auto;
   border: 16px solid white;
   width: 120px;
@@ -345,6 +345,17 @@ footer ul li a i {
   border-bottom-color: #e586df;
   border-radius: 50%;
   animation: chargeur 5s linear infinite;
+}
+.backgroundloader .circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(140, 228, 206);
+  border-radius: 50%;
 }
 
 #position {
@@ -512,20 +523,24 @@ footer ul li a i {
   font-size: 1.4em;
   position: relative;
   margin-top: -20px;
-  -webkit-text-fill-color: red;
   transition-property: transform;
 }
-#restaurants article figure figcaption span:hover .up {
-  transform: scale(0);
+#restaurants article figure figcaption span:active .up, #restaurants article figure figcaption span:checked .up {
+  transform: scale(1);
 }
-#restaurants article figure figcaption span:hover .none {
+#restaurants article figure figcaption span:active .none, #restaurants article figure figcaption span:checked .none {
   animation: hearth;
+  animation-fill-mode: forwards;
   animation-duration: 1000ms;
 }
 #restaurants article figure figcaption span .none {
   scale: 0;
 }
 #restaurants article figure figcaption span i {
+  background: linear-gradient(#e586df, #9D59DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
   cursor: pointer;
 }
@@ -628,18 +643,24 @@ main #menu h2::after {
 }
 main #menu article {
   display: flex;
+  justify-content: space-between;
   border-radius: 15px;
   padding: 10px;
   width: 100%;
   margin-bottom: 10px;
   background-color: white;
-  justify-content: space-between;
   box-shadow: 0px 0px 10px 2px rgb(219, 219, 219);
   animation: lazyloading 3s;
+  cursor: pointer;
+}
+main #menu article:hover i {
+  transition-delay: 2s;
+  display: flex;
+  animation: check 2s;
 }
 main #menu article div {
   display: flex;
-  width: 80%;
+  width: 70%;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -660,11 +681,25 @@ main #menu article div p {
   font-size: 1em;
 }
 main #menu article span {
+  flex-basis: 10%;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
 }
 main #menu article i {
-  display: none !important;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 20%;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-right: -10px;
+  margin-left: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 1.2em;
+  background-color: rgb(140, 228, 206);
+  color: white;
 }
 
 @media screen and (min-width: 992px) {
@@ -685,8 +720,8 @@ main #menu article i {
     transform: rotate(0deg) scale(1);
   }
   25% {
-    border-top-color: #9D59DC;
-    border-bottom-color: #9D59DC;
+    border-top-color: #9d59dc;
+    border-bottom-color: #9d59dc;
   }
   50% {
     transform: rotate(360deg) scale(1);
@@ -722,15 +757,23 @@ main #menu article i {
   }
 }
 @keyframes lazyloading {
-  0% {
-    transform-origin: 50% bottom;
-    transform: translateY(200px);
-    scale: 0;
+  from {
+    transform: translateY(100px);
     opacity: 0;
   }
-  100% {
+  to {
     transform: translateY(0px);
-    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes check {
+  from {
+    transform-origin: right;
+    flex: 0;
+    opacity: 0;
+  }
+  to {
+    flex: 1;
     opacity: 1;
   }
 }
