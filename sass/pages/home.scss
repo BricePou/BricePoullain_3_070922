@@ -10,10 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: stop 5s;
+  animation: stop 3s;
   h1 {
-    position: absolute;
-    top: 300px;
+    position: relative;
+    top: -200px;
     font-family: $fonts-logo;
   }
   .loader {
@@ -21,21 +21,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
     border: 16px solid white;
     width: 120px;
     height: 120px;
     border-top-color: #e586df;
     border-bottom-color: #e586df;
     border-radius: 50%;
-    animation: chargeur 5s linear infinite;
+    animation: chargeur 3s linear infinite;
   }
   .circle{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
     width: 60px;
     height: 60px;
     background-color: $green;
