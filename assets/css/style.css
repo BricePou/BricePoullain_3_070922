@@ -254,6 +254,7 @@ a {
   color: white;
   box-shadow: 0 5px 5px -5px #333;
   background: linear-gradient(#e586df, #9D59DC);
+  transition-duration: 250ms;
 }
 .btn:hover {
   box-shadow: 0 5px 20px -5px rgb(36, 36, 36);
@@ -501,7 +502,6 @@ footer ul li a i {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: center;
   padding: 10px;
 }
 #restaurants article figure figcaption a {
@@ -519,28 +519,29 @@ footer ul li a i {
   flex-basis: 80%;
 }
 #restaurants article figure figcaption span {
+  display: flex;
+  justify-content: center;
   width: 10%;
-  font-size: 1.4em;
   position: relative;
-  margin-top: -20px;
   transition-property: transform;
 }
-#restaurants article figure figcaption span:active .up, #restaurants article figure figcaption span:checked .up {
+#restaurants article figure figcaption span:hover .empty-heart {
   transform: scale(1);
 }
-#restaurants article figure figcaption span:active .none, #restaurants article figure figcaption span:checked .none {
+#restaurants article figure figcaption span:hover .plain-heart {
   animation: hearth;
   animation-fill-mode: forwards;
   animation-duration: 1000ms;
 }
-#restaurants article figure figcaption span .none {
+#restaurants article figure figcaption span .plain-heart {
   scale: 0;
-}
-#restaurants article figure figcaption span i {
   background: linear-gradient(#e586df, #9D59DC);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#restaurants article figure figcaption span i {
+  font-size: 1.6em;
   position: absolute;
   cursor: pointer;
 }

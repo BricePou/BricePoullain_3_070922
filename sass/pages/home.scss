@@ -177,7 +177,6 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        align-items: center;
         padding: 10px;
         a {
           display: flex;
@@ -194,30 +193,32 @@
           }
         }
         span {
+          display: flex;
+          justify-content: center;
           width: 10%;
-          font-size: 1.4em;
+
           position: relative;
-          margin-top: -20px;
           transition-property: transform;
           
-          &:active, &:checked {
-            & .up {
+          &:hover {
+            & .empty-heart {
               transform: scale(1);
             }
-            & .none {
+            & .plain-heart {
               animation: hearth ;
               animation-fill-mode: forwards;
               animation-duration: 1000ms;
             }
           }
-          .none {
+          .plain-heart {
             scale: 0;
-          }
-          i {
             background: $button-color;
             -webkit-background-clip: text;
             background-clip: text;
            -webkit-text-fill-color:transparent;
+          }
+          i {
+            font-size: 1.6em;
             position: absolute;
             cursor: pointer;
           }
