@@ -194,10 +194,8 @@
           display: flex;
           justify-content: center;
           width: 10%;
-
           position: relative;
           transition-property: transform;
-          
           &:hover {
             & .empty-heart {
               transform: scale(1);
@@ -244,15 +242,5 @@
       }
     }
   }
-  footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    h3 {
-      flex-basis: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
+
 }
