@@ -51,12 +51,9 @@
 }
 @keyframes check {
   from {
-    transform-origin: right;
-    flex: 0;
-    opacity: 0;
+    transform: rotate(0deg);
   }
   to {
-    flex: 1;
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
