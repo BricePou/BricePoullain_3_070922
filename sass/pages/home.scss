@@ -1,6 +1,6 @@
 .backgroundloader {
   scale: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,25 +10,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: stop 5s;
+  animation: stop 3s;
   h1 {
-    position: absolute;
-    top: 300px;
+    position: relative;
+    top: -200px;
     font-family: $fonts-logo;
   }
   .loader {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $fonts-logo;
-    margin: auto;
     border: 16px solid white;
     width: 120px;
     height: 120px;
     border-top-color: #e586df;
     border-bottom-color: #e586df;
     border-radius: 50%;
-    animation: chargeur 5s linear infinite;
+    animation: chargeur 3s linear infinite;
+  }
+  .circle{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+    border-radius: 50%;
   }
 }
 #position {
@@ -166,7 +175,6 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        align-items: center;
         padding: 10px;
         a {
           display: flex;
@@ -183,25 +191,30 @@
           }
         }
         span {
+          display: flex;
+          justify-content: center;
           width: 10%;
-          font-size: 1.4em;
           position: relative;
-          margin-top: -20px;
-          -webkit-text-fill-color: red;
           transition-property: transform;
           &:hover {
-            & .up {
-              transform: scale(0);
+            & .empty-heart {
+              transform: scale(1);
             }
-            & .none {
-              animation: hearth;
+            & .plain-heart {
+              animation: hearth ;
+              animation-fill-mode: forwards;
               animation-duration: 1000ms;
             }
           }
-          .none {
+          .plain-heart {
             scale: 0;
+            background: $button-color;
+            -webkit-background-clip: text;
+            background-clip: text;
+           -webkit-text-fill-color:transparent;
           }
           i {
+            font-size: 1.6em;
             position: absolute;
             cursor: pointer;
           }
@@ -229,15 +242,5 @@
       }
     }
   }
-  footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    h3 {
-      flex-basis: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
+
 }

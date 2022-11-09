@@ -25,3 +25,14 @@ footer {
       }
     }
   }
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    h3 {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
