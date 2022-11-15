@@ -190,9 +190,10 @@
             flex-basis: 80%;
           }
         }
-        span {
+        .animation-heart {
           display: flex;
           justify-content: center;
+          align-items: center;
           width: 10%;
           position: relative;
           transition-property: transform;

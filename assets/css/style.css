@@ -314,18 +314,24 @@ footer ul li a i {
   margin-right: 10px;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
+@media screen and (min-width: 992px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  footer h3 {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+  footer ul {
+    padding: 0;
+  }
 }
-footer h3 {
-  flex-basis: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .backgroundloader {
   scale: 0;
   position: fixed;
@@ -528,29 +534,30 @@ footer h3 {
 #restaurants article figure figcaption a p {
   flex-basis: 80%;
 }
-#restaurants article figure figcaption span {
+#restaurants article figure figcaption .animation-heart {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 10%;
   position: relative;
   transition-property: transform;
 }
-#restaurants article figure figcaption span:hover .empty-heart {
+#restaurants article figure figcaption .animation-heart:hover .empty-heart {
   transform: scale(1);
 }
-#restaurants article figure figcaption span:hover .plain-heart {
+#restaurants article figure figcaption .animation-heart:hover .plain-heart {
   animation: hearth;
   animation-fill-mode: forwards;
   animation-duration: 1000ms;
 }
-#restaurants article figure figcaption span .plain-heart {
+#restaurants article figure figcaption .animation-heart .plain-heart {
   scale: 0;
   background: linear-gradient(#e586df, #9D59DC);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#restaurants article figure figcaption span i {
+#restaurants article figure figcaption .animation-heart i {
   font-size: 1.6em;
   position: absolute;
   cursor: pointer;
@@ -582,9 +589,32 @@ footer h3 {
   align-items: center;
   justify-content: space-between;
 }
-#titles i {
-  margin-right: 40px;
-  font-size: 1.5em;
+#titles .animation-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: transform;
+}
+#titles .animation-heart:hover .empty-heart {
+  transform: scale(1);
+}
+#titles .animation-heart:hover .plain-heart {
+  animation: hearth;
+  animation-fill-mode: forwards;
+  animation-duration: 1000ms;
+}
+#titles .animation-heart .plain-heart {
+  scale: 0;
+  background: linear-gradient(#e586df, #9D59DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#titles .animation-heart i {
+  margin-right: 75px;
+  font-size: 1.6em;
+  position: absolute;
+  cursor: pointer;
 }
 
 main img {
@@ -700,11 +730,16 @@ main #menu article.animation_time--9 {
   animation-delay: 4500ms;
   animation-fill-mode: forwards;
 }
+main #menu article.animation_time--10 {
+  animation: lazyloading 2s;
+  animation-delay: 5000ms;
+  animation-fill-mode: forwards;
+}
 main #menu article:hover .check {
-  width: 100px;
+  width: 80px;
 }
 main #menu article:hover .check i {
-  animation: check 500ms;
+  animation: check 350ms;
 }
 main #menu article div {
   display: flex;
@@ -745,7 +780,7 @@ main #menu article .check {
   margin-bottom: -10px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   background-color: rgb(140, 228, 206);
   color: white;
   transition-duration: 500ms;
@@ -817,7 +852,7 @@ main #menu article .check {
 }
 @keyframes check {
   from {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
   to {
     transform: rotate(360deg);
