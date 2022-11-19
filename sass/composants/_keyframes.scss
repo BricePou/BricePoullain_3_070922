@@ -19,29 +19,29 @@
 }
 @keyframes stop {
   0% {
-    scale: 1;
+    transform: scale(1);
   }
   99% {
-    scale: 1;
+    transform: scale(1);
   }
   100% {
-    scale: 0;
+    transform: scale(0);
   }
 }
 @keyframes hearth {
   from {
-    scale: 0;
+    transform: scale(0);
   }
   75% {
-    scale: 1.1;
+    transform: scale(1.1);
   }
   to {
-    scale: 1.1;
+    transform: scale(1.1);
   }
 }
 @keyframes lazyloading {
   from {
-    transform: translateY(100px);
+    transform: translateY(20px);
     opacity: 0;
   }
   to {
@@ -51,7 +51,7 @@
 }
 @keyframes check {
   from {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
   to {
     transform: rotate(360deg);
