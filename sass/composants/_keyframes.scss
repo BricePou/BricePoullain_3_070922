@@ -19,24 +19,24 @@
 }
 @keyframes stop {
   0% {
-    scale: 1;
+    transform: scale(1);
   }
   99% {
-    scale: 1;
+    transform: scale(1);
   }
   100% {
-    scale: 0;
+    transform: scale(0);
   }
 }
 @keyframes hearth {
   from {
-    scale: 0;
+    transform: scale(0);
   }
   75% {
-    scale: 1.1;
+    transform: scale(1.1);
   }
   to {
-    scale: 1.1;
+    transform: scale(1.1);
   }
 }
 @keyframes lazyloading {

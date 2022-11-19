@@ -1,5 +1,5 @@
 .backgroundloader {
-  scale: 0;
+  transform: scale(0);
   position: fixed;
   top: 0;
   left: 0;
@@ -193,7 +193,6 @@
         .animation-heart {
           display: flex;
           justify-content: center;
-          align-items: center;
           width: 10%;
           position: relative;
           transition-property: transform;
@@ -208,7 +207,7 @@
             }
           }
           .plain-heart {
-            scale: 0;
+            transform: scale(0);
             background: $button-color;
             -webkit-background-clip: text;
             background-clip: text;

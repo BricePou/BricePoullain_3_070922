@@ -25,7 +25,7 @@
       }
     }
     .plain-heart {
-      scale: 0;
+      transform: scale(0);
       background: $button-color;
       -webkit-background-clip: text;
       background-clip: text;
