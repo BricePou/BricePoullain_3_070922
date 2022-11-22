@@ -661,6 +661,74 @@ main #menu h2 {
   font-size: 1em;
   margin-bottom: 10px;
   border-bottom-width: 1px;
+  overflow: hidden;
+  animation: lazyloading 0.3s;
+  opacity: 0;
+}
+main #menu h2.animation_time--1 {
+  animation: lazyloading 2s;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--2 {
+  animation: lazyloading 2s;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--3 {
+  animation: lazyloading 2s;
+  animation-delay: 900ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--4 {
+  animation: lazyloading 2s;
+  animation-delay: 1200ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--5 {
+  animation: lazyloading 2s;
+  animation-delay: 1500ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--6 {
+  animation: lazyloading 2s;
+  animation-delay: 1800ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--7 {
+  animation: lazyloading 2s;
+  animation-delay: 2100ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--8 {
+  animation: lazyloading 2s;
+  animation-delay: 2400ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--9 {
+  animation: lazyloading 2s;
+  animation-delay: 2700ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--10 {
+  animation: lazyloading 2s;
+  animation-delay: 3000ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--11 {
+  animation: lazyloading 2s;
+  animation-delay: 3300ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--12 {
+  animation: lazyloading 2s;
+  animation-delay: 3600ms;
+  animation-fill-mode: forwards;
+}
+main #menu h2.animation_time--13 {
+  animation: lazyloading 2s;
+  animation-delay: 3900ms;
+  animation-fill-mode: forwards;
 }
 main #menu h2::after {
   content: "";
@@ -732,6 +800,21 @@ main #menu article.animation_time--9 {
 main #menu article.animation_time--10 {
   animation: lazyloading 2s;
   animation-delay: 3000ms;
+  animation-fill-mode: forwards;
+}
+main #menu article.animation_time--11 {
+  animation: lazyloading 2s;
+  animation-delay: 3300ms;
+  animation-fill-mode: forwards;
+}
+main #menu article.animation_time--12 {
+  animation: lazyloading 2s;
+  animation-delay: 3600ms;
+  animation-fill-mode: forwards;
+}
+main #menu article.animation_time--13 {
+  animation: lazyloading 2s;
+  animation-delay: 3900ms;
   animation-fill-mode: forwards;
 }
 main #menu article:hover .check {
@@ -831,13 +914,13 @@ main #menu article .check {
 }
 @keyframes hearth {
   from {
-    transform: scale(0);
+    transform: scaleY(0);
   }
   75% {
-    transform: scale(1.1);
+    transform: scaleY(1.1);
   }
   to {
-    transform: scale(1.1);
+    transform: scaleY(1.1);
   }
 }
 @keyframes lazyloading {
