@@ -545,6 +545,7 @@ footer ul li a i {
   transform: scale(1);
 }
 #restaurants article figure figcaption .animation-heart:hover .plain-heart {
+  position: absolute;
   animation: hearth;
   animation-fill-mode: forwards;
   animation-duration: 1000ms;
@@ -559,6 +560,7 @@ footer ul li a i {
 #restaurants article figure figcaption .animation-heart i {
   font-size: 1.6em;
   position: absolute;
+  top: 20px;
   cursor: pointer;
 }
 
@@ -914,7 +916,7 @@ main #menu article .check {
 }
 @keyframes hearth {
   from {
-    transform: scaleY(0);
+    transform: scaleY-10(0);
   }
   75% {
     transform: scaleY(1.1);
